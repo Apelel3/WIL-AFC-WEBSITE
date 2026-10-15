@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/Style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Enquiry - African Foods Company</title>
+</head>
+<body>
+
+ <header class="site-header">
+        <div class="container header-inner">
+                        <a class="brand" href="../index.html" aria-label="African Foods Company home">
+                            <img class="brand-logo" src="../images/logo.svg" alt="African Foods Company logo">
+              <span class="brand-name">African Foods Company</span>
+            </a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="About.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="prices.html">Prices</a>
+                <a href="Enquiry.html">Enquiry</a>
+                <a href="Contact Us.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+  <main class="enquiry-page">
+    <section class="enquiry-intro">
+        <h2>Order & Appointment Enquiry</h2>
+        <p>Please complete the form below to enquire what you would like to order!.</p>
+    </section>
+
+    <section class="enquiry-panel">
+        <form action="#" method="post" class="enquiry-form" data-validate="true">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" data-required="true" data-required-message="Please enter your full name." placeholder="e.g Apelele Mayi">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" data-required="true" data-required-message="Please enter your email address." data-type="email" placeholder="e.g client@example.co.za">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone / WhatsApp Number</label>
+                    <input type="tel" id="phone" name="phone" data-required="true" data-required-message="Please enter your phone number." data-type="tel" placeholder="e.g 012 345 678">
+                </div>
+
+                <div class="form-group">
+                    <label for="services">Select What You Would Like To Order</label>
+                    <select id="services" name="service" data-required="true" data-required-message="Please select a product or service.">
+                        <option value="">-- Select an Option --</option>
+                        <option value="bundles">Buy Products</option>
+                        <option value="wig_construction">Canned Foods</option>
+                        <option value="fitting">Vacuum Sealed Foods</option>
+                        <option value="consultation">Bottled Packaged Foods</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" data-required="true" data-required-message="Please select your country.">
+                        <option value="">-- Select Country --</option>
+                        <option value="south_africa">South Africa</option>
+                        <option value="united_kingdom">United Kingdom</option>
+                        <option value="united_states">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="australia">Australia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="country-other-wrapper" style="display:none;">
+                    <label for="country-other">Specify Other Country</label>
+                    <input type="text" id="country-other" name="country-other" data-required="false" placeholder="e.g. Namibia, Botswana">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="details">Product Details</label>
+                <textarea id="details" name="details" rows="5" data-required="true" data-required-message="Please enter your order details." placeholder="Specify the products you would like to order and how many."></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">Submit Enquiry</button>
+                <input type="reset" value="Clear Form">
+            </div>
+        </form>
+    </section>
+  </main>
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- Column 1: About -->
+        <div class="footer-column">
+            <h3>African Foods Company</h3>
+
+            <p>
+                Markets and export South African Food to people living overseas who miss the taste of home and struggle to find it in stores.
+            </p>
+        </div>
+
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="../index.html">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="About.html">
+                        <i class="fa-solid fa-circle-info"></i>
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        <i class="fa-solid fa-scissors"></i>
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="prices.html">
+                        <i class="fa-solid fa-tags"></i>
+                        Prices
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Enquiry.html">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                        Enquiry
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Contact Us.html">
+                        <i class="fa-solid fa-phone"></i>
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Column 3: Contact -->
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <ul class="contact-info">
+
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        N1 City, Cape Town,<br>
+                        Western Cape, South Africa
+                    </span>
+                </li>
+
+                <li>
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <a href="https://wa.me/27324567891" target="_blank" rel="noopener noreferrer">
+                        032 456 7891
+                    </a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <a href="mailto:info@africanfoodscompany.com">
+                        info@africanfoodscompany.com
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Column 4: Follow Us -->
+        <div class="footer-column">
+
+            <h3>Follow Us</h3>
+
+            <p>
+                Stay in touch with African Foods Company.
+            </p>
+
+            <div class="social-icons">
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <span aria-hidden="true">◎</span>
+                </a>
+
+                <a href="https://wa.me/27324567891" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <span aria-hidden="true">💬</span>
+                </a>
+
+                <a href="mailto:info@africanfoodscompany.com" aria-label="Email">
+                    <span aria-hidden="true">✉</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 African Foods Company. All rights reserved.</p>
+    </div>
+
+</footer>
+
+<script>
+    function toggleCountryOther() {
+        const countrySelect = document.getElementById('country');
+        const otherWrapper = document.getElementById('country-other-wrapper');
+        const otherInput = document.getElementById('country-other');
+
+        if (countrySelect.value === 'other') {
+            otherWrapper.style.display = 'block';
+            otherInput.setAttribute('data-required', 'true');
+            otherInput.setAttribute('data-required-message', 'Please specify your country.');
+        } else {
+            otherWrapper.style.display = 'none';
+            otherInput.removeAttribute('data-required');
+            otherInput.removeAttribute('data-required-message');
+            otherInput.value = '';
+            otherInput.setAttribute('aria-invalid', 'false');
+            otherInput.setCustomValidity('');
+        }
+    }
+
+    function prefillFromQuery() {
+        const params = new URLSearchParams(window.location.search);
+        const product = params.get('product');
+        const fullname = params.get('fullname');
+        const email = params.get('email');
+        const quantity = params.get('quantity');
+
+        if (product) {
+            const serviceSelect = document.getElementById('services');
+            if (serviceSelect) {
+                const match = Array.from(serviceSelect.options).find(option => option.text.toLowerCase().includes(product.toLowerCase()));
+                if (match) {
+                    serviceSelect.value = match.value;
+                }
+            }
+
+            const details = document.getElementById('details');
+            if (details) {
+                const currentValue = details.value.trim();
+                const orderText = quantity ? `Order quantity: ${quantity}.` : 'Order quantity: 1.';
+                details.value = currentValue ? `${currentValue}\n${product} - ${orderText}` : `${product} - ${orderText}`;
+            }
+        }
+
+        if (fullname) {
+            const fullnameField = document.getElementById('fullname');
+            if (fullnameField) fullnameField.value = fullname;
+        }
+
+        if (email) {
+            const emailField = document.getElementById('email');
+            if (emailField) emailField.value = email;
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        toggleCountryOther();
+        prefillFromQuery();
+    });
+</script>
+<script src="../javascript/validation.js"></script>
+
+</body>
+</html>

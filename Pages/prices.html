@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prices - African Foods Company</title>
+    <link rel="stylesheet" href="../css/Style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="African Foods Company home">
+                <img class="brand-logo" src="../images/logo.svg" alt="African Foods Company logo">
+                <span class="brand-name">African Foods Company</span>
+            </a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="../index.html">Home</a>
+                <a href="About.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="prices.html" aria-current="page">Prices</a>
+                <a href="Enquiry.html">Enquiry</a>
+                <a href="Contact Us.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="prices-page">
+        <section class="page-header prices-header">
+            <div class="container">
+                <p class="eyebrow">Popular picks</p>
+                <h1>Food Prices</h1>
+                <p class="page-introduction">
+                    Discover trusted South African pantry favourites and export-ready food packs at competitive prices. Choose a category, add your preferred items, and continue to the enquiry form for your order.
+                </p>
+            </div>
+        </section>
+
+        <section class="price-products">
+            <div class="container">
+                <div class="pricing-grid">
+                    <article class="price-card">
+                        <img src="../images/download.webp" alt="Canned food products" class="price-image">
+                        <div class="price-body">
+                            <span class="price-tag">Canned Foods</span>
+                            <h3>South African Canned Staples</h3>
+                            <p>Popular favourites including beans, fruit, chutneys and ready-to-serve pantry items.</p>
+                            <ul>
+                                <li>KOO Beans - from R85</li>
+                                <li>Fruit in syrup - from R95</li>
+                                <li>Chakalaka - from R90</li>
+                            </ul>
+                            <button type="button" class="select-product" data-product="Canned Foods">Select</button>
+                        </div>
+                    </article>
+
+                    <article class="price-card">
+                        <img src="../images/BOXED.webp" alt="Boxed and bagged foods" class="price-image">
+                        <div class="price-body">
+                            <span class="price-tag">Boxed &amp; Bagged Foods</span>
+                            <h3>Pantry Essentials</h3>
+                            <p>Everyday staples for meal prep, breakfast, and family feeding.</p>
+                            <ul>
+                                <li>Maize meal - from R65</li>
+                                <li>Jungle Oats - from R70</li>
+                                <li>White Star Samp &amp; Beans - from R75</li>
+                            </ul>
+                            <button type="button" class="select-product" data-product="Boxed & Bagged Foods">Select</button>
+                        </div>
+                    </article>
+
+                    <article class="price-card">
+                        <img src="../images/PRICE FOR BOTTLEDE.webp" alt="Bottled foods and condiments" class="price-image">
+                        <div class="price-body">
+                            <span class="price-tag">Bottled Foods</span>
+                            <h3>Condiments &amp; Sauces</h3>
+                            <p>Classic South African sauces and bottled favourites for added flavour and convenience.</p>
+                            <ul>
+                                <li>Tomato sauce - from R48</li>
+                                <li>Chutney - from R52</li>
+                                <li>Pickles and gherkins - from R60</li>
+                            </ul>
+                            <button type="button" class="select-product" data-product="Bottled Foods">Select</button>
+                        </div>
+                    </article>
+
+                    <article class="price-card">
+                        <img src="../images/Screenshot 2026-10-13 113028.png" alt="Vacuum sealed food items" class="price-image">
+                        <div class="price-body">
+                            <span class="price-tag">Vacuum Sealed Foods</span>
+                            <h3>Freshly Packed &amp; Long Lasting</h3>
+                            <p>Vacuum-packed products designed for shelf stability and export-friendly delivery.</p>
+                            <ul>
+                                <li>Biltong packs - from R120</li>
+                                <li>Vacuum fish - from R110</li>
+                                <li>Dried fruit packs - from R95</li>
+                            </ul>
+                            <button type="button" class="select-product" data-product="Vacuum Sealed Foods">Select</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="checkout-section">
+            <div class="container checkout-panel">
+                <div class="checkout-copy">
+                    <p class="eyebrow">Quick checkout</p>
+                    <h2>Ready to order?</h2>
+                    <p>Tell us which category you want, how much you need, and we will take you directly to the enquiry form so you can confirm your delivery details.</p>
+                </div>
+
+                <form action="Enquiry.html" method="get" class="checkout-form" id="checkout-form" data-validate="true">
+                    <div class="form-group">
+                        <label for="checkout-name">Full Name</label>
+                        <input type="text" id="checkout-name" name="fullname" data-required="true" data-required-message="Please enter your full name." placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkout-email">Email Address</label>
+                        <input type="email" id="checkout-email" name="email" data-required="true" data-required-message="Please enter your email address." data-type="email" placeholder="you@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkout-product">Product Category</label>
+                        <select id="checkout-product" name="product" data-required="true" data-required-message="Please select a product category.">
+                            <option value="">-- Select a category --</option>
+                            <option value="Canned Foods">Canned Foods</option>
+                            <option value="Boxed & Bagged Foods">Boxed &amp; Bagged Foods</option>
+                            <option value="Bottled Foods">Bottled Foods</option>
+                            <option value="Vacuum Sealed Foods">Vacuum Sealed Foods</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkout-qty">Order Quantity</label>
+                        <input type="number" id="checkout-qty" name="quantity" min="1" value="1" data-required="true" data-required-message="Please enter a valid quantity." data-type="number">
+                    </div>
+
+                    <button type="submit" class="checkout-button">Continue to Enquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>African Foods Company</h3>
+                <p>
+                    Markets and export South African Food to people living overseas who miss the taste of home and struggle to find it in stores.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="prices.html">Prices</a></li>
+                    <li><a href="Enquiry.html">Enquiry</a></li>
+                    <li><a href="Contact Us.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><span>N1 City, Cape Town, Western Cape, South Africa</span></li>
+                    <li><a href="https://wa.me/27324567891" target="_blank" rel="noopener noreferrer">032 456 7891</a></li>
+                    <li><a href="mailto:info@africanfoodscompany.com">info@africanfoodscompany.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <p>Stay in touch with African Foods Company.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+                    <a href="https://wa.me/27324567891" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
+                    <a href="mailto:info@africanfoodscompany.com" aria-label="Email">✉</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 African Foods Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.select-product').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const productName = this.getAttribute('data-product');
+                const productSelect = document.getElementById('checkout-product');
+                productSelect.value = productName;
+                productSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                productSelect.focus();
+            });
+        });
+    </script>
+    <script src="../javascript/validation.js"></script>
+</body>
+</html>

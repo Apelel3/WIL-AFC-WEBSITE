@@ -1,0 +1,1034 @@
+/* :root represents the highest-level html element.
+   It stores reusable CSS variables for the whole Services page.
+   Students must replace these example colours with their actual colours. */
+:root {
+    --primary: #1a1414; /* Store the website's main colour. */
+    --text-charcoal: #1C1C1C;  /* Deep Charcoal: Crisp text for optimal readability */
+    --card-bg: #fab3b3;        /* White background for cards to stand out on cream */
+    --primary-dark: #051522; /* Store a darker version for strong backgrounds. */
+    --accent: #4980c7; /* Store the highlight and hover colour. */
+    --background: #bcd9f5; /* Store the page background colour. */
+    --surface: #f3ece9; /* Store the card background colour. */
+    --text: #1a1b1b; /* Store the normal text colour. */
+    --border: #27292c; /* Store the card border colour. */
+}
+
+/* Select every HTML element. */
+* {
+    box-sizing: border-box; /* Include padding and borders inside element widths. */
+}
+
+/* Style the complete visible webpage. */
+body {
+    margin: 0; /* Remove the browser's default outside spacing. */
+    background-color: var(--background); /* Use the stored background colour. */
+    color: var(--text); /* Use the stored normal text colour. */
+    font-family: Arial, Helvetica, sans-serif; /* Set readable fallback fonts. */
+    font-size: 16px; /* Set the default text size. */
+    line-height: 1.6; /* Add readable space between lines. */
+}
+
+/* Create a reusable centred content area. */
+.container {
+    width: min(90%, 1200px); /* Use 90% width but never exceed 1200px. */
+    margin-inline: auto; /* Centre the container horizontally. */
+}
+
+/* Remove normal underlines and animate link colour changes. */
+a {
+    text-decoration: none; /* Remove the browser's default underline. */
+    transition: 0.25s ease; /* Smoothly animate interaction changes. */
+}
+
+/* Style the header across the top of the Services page. */
+.site-header {
+    background-color: var(--primary); /* Use the main website colour. */
+    border-bottom: 4px solid var(--accent); /* Add an accent line. */
+}
+
+/* Arrange the brand and navigation in one row. */
+.header-inner {
+    display: flex; /* Place children next to each other. */
+    align-items: center; /* Align children vertically. */
+    min-height: 82px;
+    gap: 1rem;
+}
+
+/* Style the clickable organisation name. */
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-right: auto;
+    color: #ffffff; /* Display the brand in white. */
+    font-weight: bold; /* Emphasise the organisation name. */
+}
+
+/* Style the brand logo image. */
+.brand-logo {
+    display: block;
+    width: 88px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 4px 8px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 1.08rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.brand:hover .brand-logo {
+    transform: scale(1.04);
+    opacity: 0.96;
+}
+
+/* Arrange the main navigation links. */
+.site-nav {
+    display: flex; /* Place links in one row. */
+    gap: 0.35rem; /* Add a small gap between links. */
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+/* Style each link inside the main navigation. */
+.site-nav a {
+    padding: 0.7rem 0.9rem; /* Add clickable space inside each link. */
+    border-radius: 6px; /* Round the link corners. */
+    color: #ffffff; /* Display normal navigation text in white. */
+    font-weight: bold; /* Make navigation labels easy to identify. */
+}
+
+/* Apply when a mouse pointer is over a navigation link. */
+.site-nav a:hover {
+    background-color: var(--accent); /* Change to the accent background. */
+    color: var(--primary-dark); /* Use dark text for contrast. */
+    transform: translateY(-2px); /* Move the link slightly upward. */
+}
+
+/* Apply when a keyboard user selects a navigation link. */
+.site-nav a:focus-visible {
+    outline: 3px solid #ffffff; /* Draw a visible keyboard focus outline. */
+    outline-offset: 2px; /* Add space around the outline. */
+}
+
+/* Highlight the link for the page currently open. */
+.site-nav a[aria-current="page"] {
+    background-color: #ffffff; /* Use a white active-link background. */
+    color: var(--primary); /* Use the main colour for active-link text. */
+}
+
+/* Style the short introduction at the top of the page. */
+.page-header {
+    padding: 4rem 0; /* Add vertical space inside the section. */
+    background-color: var(--primary-dark); /* Use the dark website colour. */
+    color: #ffffff; /* Make inherited text white. */
+    text-align: center; /* Centre the introduction. */
+}
+
+/* Style the small line above the main heading. */
+.eyebrow {
+    margin-bottom: 0.5rem; /* Add space below the line. */
+    color: var(--accent); /* Use the accent colour. */
+    font-weight: bold; /* Emphasise the text. */
+    text-transform: uppercase; /* Display the text in capital letters. */
+}
+
+/* Style the main Services heading. */
+.page-header h1 {
+    margin: 0 0 1rem; /* Remove top space and add bottom space. */
+    font-size: clamp(2rem, 5vw, 3.25rem); /* Make the size responsive. */
+}
+
+/* Keep the introductory paragraph readable and centred. */
+.page-introduction {
+    max-width: 700px; /* Stop the paragraph from becoming too wide. */
+    margin: 0 auto; /* Centre the paragraph. */
+}
+
+/* Add space around the main Services content. */
+.services-section {
+    padding: 4rem 0; /* Add vertical section spacing. */
+}
+
+/* Style the heading above the cards. */
+.section-heading {
+    margin: 0 0 2rem; /* Add space below the heading. */
+    color: var(--primary); /* Use the main website colour. */
+    text-align: center; /* Centre the heading. */
+}
+
+/* Arrange four cards in a responsive grid. */
+.services-grid {
+    display: grid; /* Turn this container into CSS Grid. */
+    grid-template-columns: repeat(4, 1fr); /* Create four equal columns. */
+    gap: 1.5rem; /* Add space between cards. */
+}
+
+/* Style every repeated service card. */
+.service-card {
+    overflow: hidden; /* Keep the image inside the rounded corners. */
+    background-color: var(--surface); /* Use the stored card colour. */
+    border: 1px solid var(--border); /* Add a light card border. */
+    border-radius: 10px; /* Round the card corners. */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12); /* Add depth. */
+    transition: transform 0.25s ease; /* Animate the card hover movement. */
+}
+
+/* Apply while the mouse is over a service card. */
+.service-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly upward. */
+}
+
+/* Give every service image the same size. */
+.service-image {
+    display: block; /* Remove the inline gap below an image. */
+    width: 100%; /* Fill the complete card width. */
+    height: 180px; /* Give all four images equal height. */
+    object-fit: cover; /* Crop images without stretching them. */
+}
+
+/* Add internal spacing around each card's text. */
+.service-content {
+    padding: 1.25rem; /* Add space between text and card edges. */
+}
+
+/* Style each service name. */
+.service-content h3 {
+    margin: 0 0 0.5rem; /* Remove top space and add bottom space. */
+    color: var(--primary); /* Use the main website colour. */
+}
+
+/* Remove unnecessary space below each service description. */
+.service-content p {
+    margin-bottom: 0; /* Remove the final paragraph's bottom margin. */
+}
+
+/* Style the footer at the bottom of the Services page. */
+.site-footer {
+    padding: 2rem 0; /* Add internal footer spacing. */
+    background-color: var(--primary-dark); /* Use the dark website colour. */
+    color: #ffffff; /* Display footer text in white. */
+    text-align: center; /* Centre the footer text. */
+}
+
+/* Remove the paragraph's default footer margin. */
+.site-footer p {
+    margin: 0; /* Remove unwanted space around the copyright. */
+}
+
+/* Footer contact info specific styles */
+.site-footer .contact-info {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+
+.site-footer .contact-info li {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.site-footer .contact-info,
+.site-footer .contact-info li,
+.site-footer .contact-info a,
+.site-footer .contact-info span {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #ddd;
+}
+
+.site-footer .contact-info li {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Tablet rules apply when the screen is 900px or narrower. */
+@media (max-width: 900px) {
+    /* Stack the brand above the navigation on tablets. */
+    .header-inner {
+        flex-direction: column; /* Change the header from a row to a column. */
+        padding: 1rem 0; /* Add space inside the stacked header. */
+    }
+
+    /* Allow tablet navigation links to move onto another line. */
+    .site-nav {
+        justify-content: center; /* Centre the links. */
+        flex-wrap: wrap; /* Wrap links when space is limited. */
+    }
+
+    /* Change the four service cards into two columns. */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* Display two equal columns. */
+    }
+}
+
+/* Phone rules apply when the screen is 600px or narrower. */
+@media (max-width: 600px) {
+    /* Stack the navigation links vertically. */
+    .site-nav {
+        width: 100%; /* Fill the available phone width. */
+        flex-direction: column; /* Place links below one another. */
+    }
+
+    /* Make every phone navigation link easy to tap. */
+    .site-nav a {
+        width: 100%; /* Make each link fill the navigation width. */
+        text-align: center; /* Centre each link label. */
+    }
+
+    /* Display one service card per row on phones. */
+    .services-grid {
+        grid-template-columns: 1fr; /* Change the grid to one column. */
+    }
+}
+
+    .site-footer {
+        background-color: #071722;
+        color: white;
+        padding: 50px 8% 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+        gap: 50px;
+        text-align: left;
+    }
+
+    .footer-column h3 {
+        color: #5ea9e6;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-column p {
+        color: #ddd;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* Remove dots from lists */
+    .footer-links,
+    .contact-info {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li,
+    .contact-info li {
+        margin-bottom: 14px;
+    }
+
+    .footer-links a,
+    .contact-info a {
+        color: #ddd;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .footer-links a:hover,
+    .contact-info a:hover {
+        color: #9fd0ff;
+    }
+
+    .footer-links i,
+    .contact-info i {
+        color: #5ea9e6;
+        width: 25px;
+        margin-right: 8px;
+    }
+
+    .contact-info li {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .contact-info li i {
+        margin-top: 3px;
+    }
+
+    /* Social media icons */
+    .social-icons {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        background-color: #5ea9e6;
+        color: #071722;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 1.1rem;
+        line-height: 1;
+        transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+        background-color: #bfe0ff;
+        transform: translateY(-3px);
+    }
+
+    /* Copyright */
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        margin-top: 40px;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+        color: #aaa;
+        font-size: 13px;
+    }
+
+/* General Page Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Main Contact Container */
+.contact-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+
+/* Contact Page Heading */
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header h1 {
+    font-size: 40px;
+    color: #2f2f2f;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* Two Column Layout */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+
+/* Contact Information & Form Cards */
+.contact-info,
+.contact-form {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Section Headings */
+.contact-info h2,
+.contact-form h2 {
+    color: #2f2f2f;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+
+/* Contact Details */
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item h3 {
+    font-size: 16px;
+    color: #7db7eb;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #555;
+}
+
+
+/* Collection Notes */
+.collection-notes {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.collection-notes h3 {
+    color: #7db7eb;
+    margin-bottom: 8px;
+}
+
+.collection-notes p {
+    color: #555;
+}
+
+
+/* Form */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #444;
+}
+
+
+/* Input Fields */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+    font: inherit;
+    background-color: #fff;
+    color: #222;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* Textarea */
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+
+/* Input Focus */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(46, 127, 209, 0.12);
+}
+
+
+/* Submit Button */
+.contact-form button {
+    width: 100%;
+    padding: 13px;
+    background-color: #2e7fd1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #9fd0ff;
+}
+
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    .contact-container {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-header h1 {
+        font-size: 32px;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 25px;
+    }
+}
+
+/* Responsive images for index page */
+.hero-graphic,
+.feature-graphic {
+    display: block;
+    max-width: 100%;
+    width: min(100%, 760px);
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-graphic {
+    width: min(100%, 620px);
+}
+
+/* Home page layout and centering */
+.home-tagline {
+    max-width: 900px;
+    margin: 2rem auto 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.home-page {
+    width: min(90%, 1100px);
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+}
+
+.home-page section {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.home-page section h2,
+.home-page section h3 {
+    color: var(--primary);
+}
+
+.home-hero {
+    padding: 2.5rem 2rem;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(39, 41, 44, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.home-hero h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.home-hero p {
+    max-width: 820px;
+    margin: 0 auto 1rem;
+    font-size: 1.05rem;
+}
+
+.home-hero a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.home-highlights {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.home-page .feature-box {
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(39, 41, 44, 0.1);
+    border-radius: 18px;
+    padding: 1.5rem 1.5rem 1.2rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+    text-align: left;
+}
+
+.home-page .feature-box ul {
+    margin: 1rem 0 0;
+    padding-left: 1.2rem;
+    color: #2d2d2d;
+    line-height: 1.8;
+}
+
+.home-page .promo-banner {
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(39, 41, 44, 0.15);
+    border-radius: 18px;
+    padding: 2rem 1.5rem;
+}
+
+.home-page .promo-banner a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* About Page Styles */
+.about-page {
+    width: min(90%, 1100px);
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+}
+
+.about-intro {
+    text-align: center;
+    margin: 2rem auto 2.5rem;
+    max-width: 900px;
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.about-section {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(39, 41, 44, 0.1);
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    padding: 2rem 2rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-section h2 {
+    margin: 0 0 1rem;
+    color: var(--primary);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.about-section p,
+.about-section li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #2d2d2d;
+}
+
+.about-section ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.about-section li {
+    list-style: disc;
+    padding-left: 0.35rem;
+}
+
+/* Mobile styles for About page */
+@media (max-width: 768px) {
+    .about-intro {
+        font-size: 1rem;
+    }
+
+    .about-section {
+        padding: 1.5rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p,
+    .about-section li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Enquiry Form Styles */
+.enquiry-form {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-top: 30px;
+}
+
+.enquiry-form h2 {
+    color: #2f2f2f;
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.enquiry-form .form-group {
+    margin-bottom: 18px;
+}
+
+.enquiry-form label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #444;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+    font: inherit;
+    background-color: #fff;
+    color: #222;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.enquiry-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(46, 127, 209, 0.12);
+}
+
+/* Enquiry Form Buttons */
+.enquiry-form .form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.enquiry-form .form-actions button,
+.enquiry-form .form-actions input[type="reset"] {
+    flex: 1;
+    min-height: 56px;
+    padding: 0.95rem 1.25rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.enquiry-form .form-actions button {
+    background: #2e7fd1;
+    color: #fff;
+}
+
+.enquiry-form .form-actions input[type="reset"] {
+    background: #dfeefb;
+    color: var(--primary);
+}
+
+.enquiry-form .form-actions button:hover,
+.enquiry-form .form-actions input[type="reset"]:hover {
+    transform: translateY(-1px);
+    opacity: 0.98;
+}
+
+/* Prices page styles */
+.prices-page {
+    background: #f7f3ef;
+}
+
+.prices-header {
+    background: linear-gradient(135deg, var(--primary-dark), #203b53);
+}
+
+.price-products {
+    padding: 4rem 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.price-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 14px 30px rgba(15, 22, 28, 0.08);
+    border: 1px solid rgba(39, 41, 44, 0.09);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 34px rgba(15, 22, 28, 0.12);
+}
+
+.price-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.price-body {
+    padding: 1.25rem 1.2rem 1.35rem;
+}
+
+.price-tag {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    margin-bottom: 0.75rem;
+    border-radius: 999px;
+    background: #dfeefb;
+    color: var(--primary-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.price-body h3 {
+    margin: 0 0 0.7rem;
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+.price-body p {
+    margin: 0 0 0.9rem;
+    color: #4a4d52;
+    font-size: 0.95rem;
+}
+
+.price-body ul {
+    margin: 0 0 1rem;
+    padding-left: 1.1rem;
+    color: #2d2d2d;
+    line-height: 1.8;
+}
+
+.select-product,
+.checkout-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.select-product:hover,
+.checkout-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.98;
+}
+
+.checkout-section {
+    padding: 0 0 4rem;
+}
+
+.checkout-panel {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 14px 30px rgba(15, 22, 28, 0.08);
+    border: 1px solid rgba(39, 41, 44, 0.08);
+}
+
+.checkout-copy h2 {
+    margin: 0 0 0.8rem;
+    color: var(--primary);
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+}
+
+.checkout-copy p {
+    color: #3f4348;
+    line-height: 1.8;
+}
+
+.checkout-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.checkout-form .form-group {
+    margin: 0;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 0.45rem;
+    font-weight: 700;
+    color: #2d2d2d;
+}
+
+.checkout-form input,
+.checkout-form select {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+    font: inherit;
+    background: #fff;
+    color: #222;
+}
+
+.checkout-form input:focus,
+.checkout-form select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(46, 127, 209, 0.12);
+}
+
+@media (max-width: 1100px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+    .checkout-panel {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-image {
+        height: 200px;
+    }
+}
