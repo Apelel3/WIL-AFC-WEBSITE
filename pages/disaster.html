@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Recovery - Vantage Network Solutions</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand"><div class="brand-logo-icon">V</div><div class="brand-text"><span class="brand-title">Vantage</span><span class="brand-subtitle">NETWORK SOLUTIONS</span></div></div>
+            <div class="workspace-label">WORKSPACE</div>
+            <nav class="sidebar-nav">
+                <a href="overview.html" class="nav-item"><i class="fa-solid fa-house"></i> Overview</a>
+                <a href="infrastructure.html" class="nav-item"><i class="fa-solid fa-network-wired"></i> Infrastructure</a>
+                <a href="staff.html" class="nav-item"><i class="fa-solid fa-users"></i> Staff structure</a>
+                <a href="security.html" class="nav-item"><i class="fa-solid fa-shield-halved"></i> Security policy</a>
+                <a href="servicedesk.html" class="nav-item"><i class="fa-solid fa-headset"></i> Service desk <span class="badge-count">3</span></a>
+                <a href="disaster.html" class="nav-item active"><i class="fa-solid fa-clock-rotate-left"></i> Disaster recovery</a>
+                <a href="inventory.html" class="nav-item"><i class="fa-solid fa-boxes-stacked"></i> Inventory &amp; Products</a>
+            </nav>
+            <div class="sidebar-footer"><div class="status-card"><div class="status-dot green"></div><div class="status-info"><strong>All systems protected</strong><span>Last scan · 8 min ago</span></div></div><div class="user-profile-card"><div class="user-avatar">AM</div><div class="user-details"><strong>Apelele Mayi</strong><span>IT Manager · Log out</span></div></div></div>
+        </aside>
+        <main class="main-content">
+            <header class="top-header">
+                <div class="search-container">
+                    <div class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input type="text" id="globalSearch" placeholder="Search products, tickets, infrastructure or SOPs..." autocomplete="off"><span class="kbd">⌘K</span></div>
+                    <div id="searchResultsDropdown" class="search-dropdown"></div>
+                </div>
+                <div class="header-right"><div class="location-selector" id="locationBtn"><span class="dot green"></span><span id="currentLocationLabel">Cape Town HQ</span><i class="fa-solid fa-chevron-down"></i></div><button class="icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button><div class="user-pill">AM</div></div>
+            </header>
+
+            <div id="viewsContainer">
+                <section id="disaster" class="view-section active">
+                    <div class="section-header-block"><span class="date-label">MONDAY, 12 OCTOBER</span><h1>Disaster recovery</h1><p>Recovery readiness for infrastructure, data and branch outages.</p></div>
+                    <div class="status-hero mini"><div class="status-hero-content"><div class="badge-tag"><i class="fa-solid fa-check"></i> CURRENT STATUS</div><h3>Latest recovery points verified</h3><p>Operational information is synchronized across Cape Town, Durban, Polokwane, and Gqeberha.</p></div><div class="check-circle-icon"><i class="fa-solid fa-check"></i></div></div>
+                    <div class="metrics-grid-3">
+                        <div class="metric-card"><div class="metric-icon green"><i class="fa-solid fa-clock-rotate-left"></i></div><div class="metric-body"><span>Recovery target</span><h2>4 hr</h2><span class="metric-sub"><span class="dot green"></span> Database RTO</span></div></div>
+                        <div class="metric-card"><div class="metric-icon blue"><i class="fa-solid fa-database"></i></div><div class="metric-body"><span>Last backup</span><h2>23:00</h2><span class="metric-sub"><span class="dot green"></span> AWS Cape Town</span></div></div>
+                        <div class="metric-card"><div class="metric-icon purple"><i class="fa-solid fa-check-double"></i></div><div class="metric-body"><span>Restore tests</span><h2>Passed</h2><span class="metric-sub"><span class="dot green"></span> Completed this month</span></div></div>
+                    </div>
+                    <div class="split-grid" style="margin-top: 2rem;">
+                        <div class="panel">
+                            <h3>Recovery playbooks</h3>
+                            <p class="panel-desc">Approved step-by-step procedures</p>
+                            <div class="branch-list-item"><div class="item-badge green-bg"><i class="fa-solid fa-server"></i></div><div class="item-info"><strong>HQ core router replacement</strong><span>Cold standby swap, configuration restore and tunnel verification</span></div><span class="badge-pill orange-bg">Priority 1</span></div>
+                            <div class="branch-list-item"><div class="item-badge green-bg"><i class="fa-solid fa-database"></i></div><div class="item-info"><strong>Sage ERP database recovery</strong><span>Isolate, restore from AWS S3 and validate financial records</span></div><span class="badge-pill orange-bg">Priority 1</span></div>
+                            <div class="branch-list-item"><div class="item-badge green-bg"><i class="fa-solid fa-network-wired"></i></div><div class="item-info"><strong>Branch connectivity failure</strong><span>Remote diagnosis, ISP escalation and spare equipment dispatch</span></div><span class="badge-pill blue-bg">Priority 2</span></div>
+                        </div>
+                        <div class="panel">
+                            <h3>Backup schedule</h3>
+                            <p class="panel-desc">Encrypted local and offsite protection</p>
+                            <div class="service-row"><div class="service-check"><i class="fa-solid fa-database"></i></div><div class="item-info"><strong>Database snapshot</strong><span>Daily at 23:00 · 30 daily and 12 monthly copies</span></div><span class="badge-pill gray-bg">AWS S3</span></div>
+                            <div class="service-row"><div class="service-check"><i class="fa-solid fa-file-code"></i></div><div class="item-info"><strong>Network configurations</strong><span>On every change, plus weekly retention</span></div><span class="badge-pill gray-bg">10 states</span></div>
+                            <div class="service-row"><div class="service-check"><i class="fa-solid fa-hard-drive"></i></div><div class="item-info"><strong>Bare-metal image</strong><span>Sunday at 02:00 · four-week rolling window</span></div><span class="badge-pill gray-bg">Weekly</span></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer class="app-footer"><p>&copy; 2026 African Foods Company &amp; Vantage Network Solutions. All rights reserved.</p></footer>
+        </main>
+    </div>
+    <div id="toast" class="toast">Action completed successfully.</div>
+    <script src="../javasript/script.js"></script>
+</body>
+</html>

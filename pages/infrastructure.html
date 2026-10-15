@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure - Vantage Network Solutions</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo-icon">V</div>
+                <div class="brand-text">
+                    <span class="brand-title">Vantage</span>
+                    <span class="brand-subtitle">NETWORK SOLUTIONS</span>
+                </div>
+            </div>
+            <div class="workspace-label">WORKSPACE</div>
+            <nav class="sidebar-nav">
+                <a href="overview.html" class="nav-item" data-target="overview"><i class="fa-solid fa-house"></i> Overview</a>
+                <a href="infrastructure.html" class="nav-item active" data-target="infrastructure"><i class="fa-solid fa-network-wired"></i> Infrastructure</a>
+                <a href="staff.html" class="nav-item" data-target="staff"><i class="fa-solid fa-users"></i> Staff structure</a>
+                <a href="security.html" class="nav-item" data-target="security"><i class="fa-solid fa-shield-halved"></i> Security policy</a>
+                <a href="servicedesk.html" class="nav-item" data-target="servicedesk"><i class="fa-solid fa-headset"></i> Service desk <span class="badge-count">3</span></a>
+                <a href="disaster.html" class="nav-item" data-target="disaster"><i class="fa-solid fa-clock-rotate-left"></i> Disaster recovery</a>
+                <a href="inventory.html" class="nav-item" data-target="inventory"><i class="fa-solid fa-boxes-stacked"></i> Inventory &amp; Products</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="status-card">
+                    <div class="status-dot green"></div>
+                    <div class="status-info"><strong>All systems protected</strong><span>Last scan · 8 min ago</span></div>
+                </div>
+                <div class="user-profile-card">
+                    <div class="user-avatar">AM</div>
+                    <div class="user-details"><strong>Apelele Mayi</strong><span>IT Manager · Log out</span></div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="globalSearch" placeholder="Search products, tickets, infrastructure or SOPs..." autocomplete="off">
+                        <span class="kbd">⌘K</span>
+                    </div>
+                    <div id="searchResultsDropdown" class="search-dropdown"></div>
+                </div>
+                <div class="header-right">
+                    <div class="location-selector" id="locationBtn">
+                        <span class="dot green"></span>
+                        <span id="currentLocationLabel">Cape Town HQ</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <button class="icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+                    <div class="user-pill">AM</div>
+                </div>
+            </header>
+
+            <div id="viewsContainer">
+                <section id="infrastructure" class="view-section active">
+                    <div class="section-header-block">
+                        <span class="date-label">MONDAY, 12 OCTOBER</span>
+                        <h1>Infrastructure</h1>
+                        <p>Monitor branch connectivity, core services, and managed devices across Cape Town, Durban, Polokwane, and Gqeberha.</p>
+                    </div>
+
+                    <div class="status-hero mini">
+                        <div class="status-hero-content">
+                            <div class="badge-tag"><i class="fa-solid fa-check"></i> CURRENT STATUS</div>
+                            <h3>All critical services are operational</h3>
+                            <p>Operational information is synchronized across Cape Town, Durban, Polokwane, and Gqeberha.</p>
+                        </div>
+                        <div class="check-circle-icon"><i class="fa-solid fa-check"></i></div>
+                    </div>
+
+                    <div class="metrics-grid-3">
+                        <div class="metric-card">
+                            <div class="metric-icon green"><i class="fa-solid fa-network-wired"></i></div>
+                            <div class="metric-body">
+                                <span>Site availability</span>
+                                <h2>100%</h2>
+                                <span class="metric-sub"><span class="dot green"></span> Cape Town, Durban, Polokwane, Gqeberha</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon blue"><i class="fa-solid fa-server"></i></div>
+                            <div class="metric-body">
+                                <span>Managed devices</span>
+                                <h2>24</h2>
+                                <span class="metric-sub"><span class="dot green"></span> 20 computers · 4 routers</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon purple"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="metric-body">
+                                <span>VPN tunnels</span>
+                                <h2>04</h2>
+                                <span class="metric-sub"><span class="dot green"></span> AES-256 secured</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel" style="margin-top: 2rem;">
+                        <h3>Branch connectivity</h3>
+                        <p class="panel-desc">Live site-to-site infrastructure across all four company locations</p>
+
+                        <div class="branch-list-item">
+                            <div class="item-badge green-bg"><i class="fa-solid fa-building"></i></div>
+                            <div class="item-info">
+                                <strong>Cape Town headquarters (HQ)</strong>
+                                <span>Database server · Core router · Shared printer · DHCP server</span>
+                            </div>
+                            <span class="badge-pill green-bg">Online - 0 ms</span>
+                        </div>
+                        <div class="branch-list-item">
+                            <div class="item-badge green-bg"><i class="fa-solid fa-code-branch"></i></div>
+                            <div class="item-info">
+                                <strong>Durban branch</strong>
+                                <span>IPsec VPN · Wireless LAN · Shared printer</span>
+                            </div>
+                            <span class="badge-pill green-bg">Online - 24 ms</span>
+                        </div>
+                        <div class="branch-list-item">
+                            <div class="item-badge green-bg"><i class="fa-solid fa-code-branch"></i></div>
+                            <div class="item-info">
+                                <strong>Polokwane branch (New Site)</strong>
+                                <span>IPsec VPN · DHCP Relay · Local AP</span>
+                            </div>
+                            <span class="badge-pill green-bg">Online - 31 ms</span>
+                        </div>
+                        <div class="branch-list-item">
+                            <div class="item-badge green-bg"><i class="fa-solid fa-code-branch"></i></div>
+                            <div class="item-info">
+                                <strong>Gqeberha branch (New Site)</strong>
+                                <span>IPsec VPN · DHCP Relay · Local AP</span>
+                            </div>
+                            <span class="badge-pill green-bg">Online - 18 ms</span>
+                        </div>
+                    </div>
+
+                    <div class="panel" style="margin-top: 2rem;">
+                        <h3>Core services</h3>
+                        <p class="panel-desc">Business-critical applications</p>
+                        <div class="service-row">
+                            <div class="service-check"><i class="fa-solid fa-check"></i></div>
+                            <div class="item-info">
+                                <strong>Sage ERP &amp; Payroll</strong>
+                                <span>Central database service</span>
+                            </div>
+                            <span class="badge-pill green-bg">Healthy</span>
+                        </div>
+                        <div class="service-row">
+                            <div class="service-check"><i class="fa-solid fa-check"></i></div>
+                            <div class="item-info">
+                                <strong>Microsoft 365</strong>
+                                <span>Identity, email and productivity</span>
+                            </div>
+                            <span class="badge-pill green-bg">Healthy</span>
+                        </div>
+                        <div class="service-row">
+                            <div class="service-check"><i class="fa-solid fa-check"></i></div>
+                            <div class="item-info">
+                                <strong>Customer website</strong>
+                                <span>DMZ hosted service</span>
+                            </div>
+                            <span class="badge-pill green-bg">Healthy</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="app-footer">
+                <p>&copy; 2026 African Foods Company &amp; Vantage Network Solutions. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
+
+    <div id="toast" class="toast">Action completed successfully.</div>
+    <script src="../javasript/script.js"></script>
+</body>
+</html>

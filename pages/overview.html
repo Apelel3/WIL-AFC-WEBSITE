@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview - Vantage Network Solutions</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo-icon">V</div>
+                <div class="brand-text">
+                    <span class="brand-title">Vantage</span>
+                    <span class="brand-subtitle">NETWORK SOLUTIONS</span>
+                </div>
+            </div>
+
+            <div class="workspace-label">WORKSPACE</div>
+
+            <nav class="sidebar-nav">
+                <a href="overview.html" class="nav-item active" data-target="overview">
+                    <i class="fa-solid fa-house"></i> Overview
+                </a>
+                <a href="infrastructure.html" class="nav-item" data-target="infrastructure">
+                    <i class="fa-solid fa-network-wired"></i> Infrastructure
+                </a>
+                <a href="staff.html" class="nav-item" data-target="staff">
+                    <i class="fa-solid fa-users"></i> Staff structure
+                </a>
+                <a href="security.html" class="nav-item" data-target="security">
+                    <i class="fa-solid fa-shield-halved"></i> Security policy
+                </a>
+                <a href="servicedesk.html" class="nav-item" data-target="servicedesk">
+                    <i class="fa-solid fa-headset"></i> Service desk <span class="badge-count">3</span>
+                </a>
+                <a href="disaster.html" class="nav-item" data-target="disaster">
+                    <i class="fa-solid fa-clock-rotate-left"></i> Disaster recovery
+                </a>
+                <a href="inventory.html" class="nav-item" data-target="inventory">
+                    <i class="fa-solid fa-boxes-stacked"></i> Inventory &amp; Products
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="status-card">
+                    <div class="status-dot green"></div>
+                    <div class="status-info">
+                        <strong>All systems protected</strong>
+                        <span>Last scan · 8 min ago</span>
+                    </div>
+                </div>
+                <div class="user-profile-card">
+                    <div class="user-avatar">AM</div>
+                    <div class="user-details">
+                        <strong>Apelele Mayi</strong>
+                        <span>IT Manager · Log out</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="globalSearch" placeholder="Search products, tickets, infrastructure or SOPs..." autocomplete="off">
+                        <span class="kbd">⌘K</span>
+                    </div>
+                    <div id="searchResultsDropdown" class="search-dropdown"></div>
+                </div>
+                <div class="header-right">
+                    <div class="location-selector" id="locationBtn">
+                        <span class="dot green"></span>
+                        <span id="currentLocationLabel">Cape Town HQ</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <button class="icon-btn" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+                    <div class="user-pill">AM</div>
+                </div>
+            </header>
+
+            <div id="viewsContainer">
+                <section id="overview" class="view-section active">
+                    <div class="welcome-banner">
+                        <h1 id="dynamicGreeting">Good morning, Apelele.</h1>
+                        <p>Here's what's happening across African Foods Company today.</p>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-icon green"><i class="fa-solid fa-network-wired"></i></div>
+                            <div class="metric-body">
+                                <span>Network health</span>
+                                <h2>98.7%</h2>
+                                <span class="metric-sub"><span class="dot green"></span> All 4 sites online (CT, Durban, Polokwane, Gqeberha)</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon orange"><i class="fa-solid fa-headset"></i></div>
+                            <div class="metric-body">
+                                <span>Open tickets</span>
+                                <h2>03</h2>
+                                <span class="metric-sub"><span class="dot orange"></span> 1 requires attention</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon blue"><i class="fa-solid fa-users"></i></div>
+                            <div class="metric-body">
+                                <span>Active users</span>
+                                <h2>20</h2>
+                                <span class="metric-sub"><span class="dot green"></span> Across 4 branches</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon purple"><i class="fa-solid fa-database"></i></div>
+                            <div class="metric-body">
+                                <span>Last backup</span>
+                                <h2>23:00</h2>
+                                <span class="metric-sub"><span class="dot green"></span> Verified successfully</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="status-hero">
+                        <div class="status-hero-content">
+                            <div class="badge-tag"><i class="fa-solid fa-shield"></i> INFRASTRUCTURE STATUS</div>
+                            <h3>Your network is secure and operating normally.</h3>
+                            <p>All site-to-site connections are healthy. The latest database backup was verified and no critical threats were detected.</p>
+                            <button class="btn-light" onclick="window.location.href='infrastructure.html'">View infrastructure <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="status-hero-graphic">
+                            <div class="hq-node">HQ</div>
+                            <div class="branch-node durban">Durban</div>
+                            <div class="branch-node polokwane">Polokwane</div>
+                            <div class="branch-node gqeberha">Gqeberha</div>
+                            <div class="db-node">DB</div>
+                            <div class="firewall-node">FW</div>
+                        </div>
+                    </div>
+
+                    <div class="split-grid">
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h3>Overseas essentials</h3>
+                                <a href="inventory.html">View inventory <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                            <p class="panel-desc">Shelf-stable favourites ready for export</p>
+
+                            <div class="item-row">
+                                <div class="item-badge ro">RO</div>
+                                <div class="item-info">
+                                    <strong>Rooibos tea</strong>
+                                    <span>Cape-grown · 80 bags</span>
+                                </div>
+                                <div class="item-status">
+                                    <span class="badge-pill orange-bg">High demand</span>
+                                    <span class="stock-text">Stock</span>
+                                    <div class="progress-bar"><div class="fill" style="width: 86%;"></div></div>
+                                    <span class="perc">86%</span>
+                                </div>
+                            </div>
+
+                            <div class="item-row">
+                                <div class="item-badge mr">MR</div>
+                                <div class="item-info">
+                                    <strong>Mrs Ball's Chutney</strong>
+                                    <span>Original · 470 g</span>
+                                </div>
+                                <div class="item-status">
+                                    <span class="badge-pill green-bg">Export ready</span>
+                                    <span class="stock-text">Stock</span>
+                                    <div class="progress-bar"><div class="fill" style="width: 72%;"></div></div>
+                                    <span class="perc">72%</span>
+                                </div>
+                            </div>
+
+                            <div class="item-row">
+                                <div class="item-badge ou">OU</div>
+                                <div class="item-info">
+                                    <strong>Ouma Rusks</strong>
+                                    <span>Buttermilk · 500 g</span>
+                                </div>
+                                <div class="item-status">
+                                    <span class="badge-pill blue-bg">Popular</span>
+                                    <span class="stock-text">Stock</span>
+                                    <div class="progress-bar"><div class="fill" style="width: 61%;"></div></div>
+                                    <span class="perc">61%</span>
+                                </div>
+                            </div>
+
+                            <div class="item-row">
+                                <div class="item-badge ar">AR</div>
+                                <div class="item-info">
+                                    <strong>Aromat seasoning</strong>
+                                    <span>Original · 200 g</span>
+                                </div>
+                                <div class="item-status">
+                                    <span class="badge-pill gray-bg">Shelf stable</span>
+                                    <span class="stock-text">Stock</span>
+                                    <div class="progress-bar"><div class="fill" style="width: 54%;"></div></div>
+                                    <span class="perc">54%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h3>Service desk</h3>
+                                <a href="servicedesk.html">All tickets <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                            <p class="panel-desc">Active support requests</p>
+
+                            <div class="ticket-row">
+                                <div class="ticket-tag p2">P2</div>
+                                <div class="ticket-info">
+                                    <strong>Durban VPN latency</strong>
+                                    <span>INC-0241 · Liya Norushu</span>
+                                </div>
+                                <div class="ticket-time"><i class="fa-regular fa-clock"></i> 42 min</div>
+                            </div>
+
+                            <div class="ticket-row">
+                                <div class="ticket-tag p3">P3</div>
+                                <div class="ticket-info">
+                                    <strong>New sales user access</strong>
+                                    <span>REQ-0238 · Support queue</span>
+                                </div>
+                                <div class="ticket-time"><i class="fa-regular fa-clock"></i> 2 hr</div>
+                            </div>
+
+                            <div class="ticket-row">
+                                <div class="ticket-tag p3">P3</div>
+                                <div class="ticket-info">
+                                    <strong>Cape Town printer offline</strong>
+                                    <span>INC-0235 · Z. Meiring</span>
+                                </div>
+                                <div class="ticket-time"><i class="fa-regular fa-clock"></i> 4 hr</div>
+                            </div>
+
+                            <div class="ticket-alert-banner">
+                                <i class="fa-solid fa-circle-check"></i> All tickets are currently within SLA targets.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="app-footer">
+                <p>&copy; 2026 African Foods Company &amp; Vantage Network Solutions. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
+
+    <div id="supportModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeSupportModal()">&times;</span>
+            <h2>Log a Support Ticket</h2>
+            <p>Submit an IT service request or incident report to the Cape Town HQ helpdesk.</p>
+            <form id="ticketForm" onsubmit="submitTicket(event)">
+                <div class="form-group">
+                    <label>Your Name / Location</label>
+                    <input type="text" id="ticketName" value="Apelele Mayi (Cape Town HQ)" required>
+                </div>
+                <div class="form-group">
+                    <label>Priority Level</label>
+                    <select id="ticketPriority">
+                        <option value="P3">P3 - Standard</option>
+                        <option value="P2">P2 - High</option>
+                        <option value="P1">P1 - Critical</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Issue Description</label>
+                    <textarea id="ticketDesc" rows="4" placeholder="Describe the technical issue..." required></textarea>
+                </div>
+                <div id="formMessage" class="form-message" aria-live="polite"></div>
+                <button type="submit" class="btn-primary">Submit Ticket</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Action completed successfully.</div>
+
+    <script src="../javasript/script.js"></script>
+</body>
+</html>
